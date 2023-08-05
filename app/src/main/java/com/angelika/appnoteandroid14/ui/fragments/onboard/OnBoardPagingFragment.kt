@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.angelika.appnoteandroid14.R
 import com.angelika.appnoteandroid14.databinding.FragmentOnBoardPagingBinding
+import com.angelika.appnoteandroid14.utils.PreferenceHelper
 
 class OnBoardPagingFragment : Fragment() {
 
@@ -49,6 +50,9 @@ class OnBoardPagingFragment : Fragment() {
 
     private fun getStarted() = with(binding) {
         tvStart.setOnClickListener {
+            val preferenceHelper = PreferenceHelper()
+            preferenceHelper.prefUnit(requireContext())
+            preferenceHelper.saveBoolean = true
             findNavController().navigate(R.id.action_onBoardFragment_to_noteAppFragment)
         }
     }
