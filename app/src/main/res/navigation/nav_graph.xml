@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/onBoardFragment">
+    app:startDestination="@id/noteAppFragment">
 
     <fragment
         android:id="@+id/onBoardFragment"
@@ -21,6 +21,16 @@
         android:id="@+id/noteAppFragment"
         android:name="com.angelika.appnoteandroid14.ui.fragments.NoteAppFragment"
         android:label="fragment_note_app"
-        tools:layout="@layout/fragment_note_app" />
+        tools:layout="@layout/fragment_note_app" >
+        <action
+            android:id="@+id/action_noteAppFragment_to_noteAppDetailFragment"
+            app:destination="@id/noteAppDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/noteAppDetailFragment"
+        android:name="com.angelika.appnoteandroid14.ui.fragments.NoteAppDetailFragment"
+        android:label="fragment_note_app_detail"
+        tools:layout="@layout/fragment_note_app_detail" />
 
 </navigation>

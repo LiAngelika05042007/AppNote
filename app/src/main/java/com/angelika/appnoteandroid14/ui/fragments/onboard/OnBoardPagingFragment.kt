@@ -49,9 +49,9 @@ class OnBoardPagingFragment : Fragment() {
     }
 
     private fun getStarted() = with(binding) {
+        val preferenceHelper = PreferenceHelper()
+        preferenceHelper.prefUnit(requireContext())
         tvStart.setOnClickListener {
-            val preferenceHelper = PreferenceHelper()
-            preferenceHelper.prefUnit(requireContext())
             preferenceHelper.saveBoolean = true
             findNavController().navigate(R.id.action_onBoardFragment_to_noteAppFragment)
         }

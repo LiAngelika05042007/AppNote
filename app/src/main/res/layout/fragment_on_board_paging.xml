@@ -37,6 +37,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:textColor="#554C4C"
+        tools:text="Начать работу"
         android:textSize="20sp"
         android:textStyle="bold" />
 

@@ -8,7 +8,7 @@ class PreferenceHelper {
     private var sharedPreferences: SharedPreferences? = null
 
     fun prefUnit(context: Context) {
-        sharedPreferences = context.getSharedPreferences("settings", Context.MODE_PRIVATE)
+        sharedPreferences = context.getSharedPreferences("settings", Context.MODE_PRIVATE)  // MODE_PRIVATE скрытие наших данных
     }
 
     var saveBoolean

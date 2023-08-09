@@ -32,10 +32,9 @@ class MainActivity : AppCompatActivity() {
 
         if (check == true) {
             navGraph.setStartDestination(R.id.noteAppFragment)
-            navController.graph = navGraph
         } else {
             navGraph.setStartDestination(R.id.onBoardFragment)
-            navController.graph = navGraph
         }
+        navController.graph = navGraph
     }
 }
